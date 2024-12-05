@@ -29,9 +29,13 @@ int main(){
 				scanf("%d",&n);
 				
 				for(int i = 0;i < n;i++){
-					printf("Phan tu thu %d gia tri %d: ",i,arr[i]);
+					printf("Phan tu thu %d gia tri %d: ",i + 1);
 					scanf("%d",&arr[i]);
 			    }
+                                printf("Cac phan tu trong mang\n ");
+                                for(int i = 0;i < n;i++){
+            		            printf("phan tu thu %d gia tri %d\n",i,arr[i]);
+            	            }
 				break;
 			case 2:
 				printf("2. In ra cac phan tu theo mang dang(arr[0] = 1,arr[1] = 5..)\n");
@@ -154,6 +158,21 @@ int main(){
 			case 9:
 				break;
 			case 10:
+                                printf("10. Sap xep mang theo thu tu tang dan(Selection sort)\n");
+				for(int i = 0;i < n;i++){
+            		            int min = arr[i];
+            		            for(int j = i + 1;j < n;j++){
+            			        if(arr[j] < min){
+	        			min = arr[j];
+        				arr[j] = arr[i];
+        				arr[i] = min;
+        			    }
+                          	}
+                	}
+                	printf("\nMang da sap xep: ");
+                 	for(int i = 0;i < n;i++){
+        		    printf("%d\t",arr[i]);
+                        }
 				break;
 			case 11:
 				break;
